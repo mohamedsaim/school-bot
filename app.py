@@ -200,7 +200,7 @@ if prompt := st.chat_input("Ask about circulars, trips, or notices..."):
             content_parts.append(types.Part.from_bytes(data=doc['data'], mime_type=doc['mime']))
 
         response = client.models.generate_content(
-            model="gemini-2.0-flash", 
+            model="gemini-flash-latest", 
             contents=content_parts
         )
         answer = response.text
